@@ -1,8 +1,10 @@
 package com.rdjaramillo.trailers.trailers.service;
 
+import org.springframework.core.io.Resource;
 import org.springframework.web.multipart.MultipartFile;
 
-import javax.annotation.Resource;
+
+import java.io.FileNotFoundException;
 import java.nio.file.Path;
 
 public interface AlmacenServicio {
@@ -13,7 +15,7 @@ public interface AlmacenServicio {
 
     public Path cargarArchivo(String nombreArchivo);
 
-    public Resource cargarComoRecurso(String nombreArchivo);
+    public Resource cargarComoRecurso(String nombreArchivo) throws FileNotFoundException;
 
     public void eliminarArchivo(String nombreArchivo);
 
